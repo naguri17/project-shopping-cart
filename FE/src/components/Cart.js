@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import {
   removeFromCart,
@@ -12,7 +12,9 @@ import { useEffect } from "react";
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);
+  const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getTotal());
@@ -115,12 +117,22 @@ const Cart = () => {
               <p className="text-[14px] font-light my-2">
                 Taxes and shipping calculated at checkout
               </p>
-              <button
-                className="w-full h-10 rounded-lg border-2 text-white cursor-pointer bg-cyan-600 hover:bg-cyan-400
+              {auth._id ? (
+                <button
+                  className="w-full h-10 rounded-lg border-2 text-white cursor-pointer bg-cyan-600 hover:bg-cyan-400
                 "
-              >
-                Check out
-              </button>
+                >
+                  Check out{" "}
+                </button>
+              ) : (
+                <button
+                  className="w-full h-10 rounded-lg border-2 text-white cursor-pointer bg-yellow-400 hover:bg-yellow-600
+                "
+                  onClick={() => navigate("/login")}
+                >
+                  Login to Check out
+                </button>
+              )}
               <div className="homepage">
                 <Link
                   to="/"
