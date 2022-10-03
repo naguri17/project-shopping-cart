@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BsFillHandbagFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { toast } from "react-toastify";
 import { logoutUser } from "../features/authSlice";
+import store from "../app/store";
+import { getTotal } from "../features/cartSlice";
 
 const NavBar = () => {
   const { cartTotalQuantity } = useSelector((state) => state.cart);
   const auth = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    store.dispatch(getTotal());
+  });
 
   return (
     <nav className="h-[70px] fixed w-full z-10 bg-cyan-400 flex justify-between items-center px-16 py-10">
