@@ -7,6 +7,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const navigate = useNavigate();
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
     if (auth._id) {
@@ -51,14 +52,14 @@ const Login = () => {
                 />
               </div>
               <div>
-                <label
+                <inp
                   for="password"
                   class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Password
-                </label>
+                </inp>
                 <input
-                  type="password"
+                  type={visible ? "text" : "password"}
                   name="password"
                   id="password"
                   placeholder="••••••••"
@@ -77,7 +78,7 @@ const Login = () => {
                       aria-describedby="remember"
                       type="checkbox"
                       class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800"
-                      required=""
+                      onClick={() => setVisible(!visible)}
                     />
                   </div>
                   <div class="ml-3 text-sm">
@@ -85,7 +86,7 @@ const Login = () => {
                       for="remember"
                       class="text-gray-500 dark:text-gray-300"
                     >
-                      Remember me
+                      Show Password
                     </label>
                   </div>
                 </div>

@@ -16,7 +16,6 @@ const store = configureStore({
   },
 });
 
-store.dispatch(getTotal());
 store.dispatch(loadUser(null));
 
 export default store;
