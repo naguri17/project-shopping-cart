@@ -16,11 +16,12 @@ const CardItem = ({ product, handleAddToCart }) => {
       </Link>
       <div className="w-[80%] mx-auto details mt-5 text-center flex justify-between">
         <span className="text-green-400">{status}</span>
-        <span className="price">${price}</span>
+        <span className="price">${price.toLocaleString()}</span>
       </div>
       <button
         onClick={() => handleAddToCart(product)}
-        className="bg-cyan-500 w-3/4 border-2 py-2 px-4 rounded-lg flex justify-center mx-auto mt-4 hover:bg-cyan-300"
+        className="bg-cyan-500 w-3/4 border-2 py-2 px-4 rounded-lg flex justify-center mx-auto mt-4 hover:bg-cyan-300 transition
+        transform"
       >
         Add To Cart
       </button>

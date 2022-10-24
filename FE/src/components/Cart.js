@@ -53,7 +53,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div>
+        <div className="translate-y-4">
           <div className="titles my-4 ml-4 text-[14px] font-semibold uppercase">
             <h3 className="title pl-4">Product</h3>
             <h3 className="price">Price</h3>
