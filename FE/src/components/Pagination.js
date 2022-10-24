@@ -10,7 +10,7 @@ const Pagination = ({
   const pageCount = Math.ceil(totalProducts / productsPerPage);
 
   return (
-    <div className="mt-5">
+    <div className="mt-5 py-10 border-b-[1px]">
       <div className="pagination flex flex-row items-center justify-center gap-3">
         {Array.from({ length: pageCount }).map((_, index) => (
           <div key={index} className="page-item">

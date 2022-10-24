@@ -15,6 +15,7 @@ import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import ProductDetails from "./components/ProductDetails";
 import Pagination from "./components/Pagination";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route path="/page" element={<Pagination />}></Route>
           <Route path="*" element={<Navigate to="not-found" />}></Route>
         </Routes>
+        <Footer />
       </Router>
     </div>
   );
