@@ -23,27 +23,8 @@ const ProductDetails = () => {
     dispatch(addToCart(product));
   };
 
-  console.log(selectedProduct);
-
-  // return (
-  //   <div className="py-8 px-4 translate-y-[125px] m-auto flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-xl">
-  //     <img
-  //       class="object-cover rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg w-[120px] h-[120px]"
-  //       src={selectedProduct?.image}
-  //       alt={selectedProduct?.name}
-  //     />
-  //     <div class="flex flex-col justify-between p-4 leading-normal">
-  //       <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-  //         {selectedProduct?.name}
-  //       </h5>
-  //       <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-  //         {selectedProduct?.details}
-  //       </p>
-  //     </div>
-  //   </div>
-  // );
   return (
-    <div className="md:flex translate-y-[100px] items-start justify-center py-12 2xl:px-20 md:px-6 px-4">
+    <div className="md:flex items-start justify-center py-[125px] 2xl:px-20 md:px-6 px-4">
       <div className="xl:w-2/6 lg:w-2/5 w-80 md:block hidden border-r-2">
         <img
           className="w-[350px] h-[450px]"

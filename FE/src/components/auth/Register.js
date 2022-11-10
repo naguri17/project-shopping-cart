@@ -29,7 +29,7 @@ const Register = () => {
   return (
     <div class="bg-gray-200 min-h-screen flex flex-col">
       <form
-        class="container max-w-sm mx-auto mt-20 flex-1 flex flex-col items-center px-2 space-y-4 md:space-y-6"
+        class="container max-w-sm mx-auto mt-20 flex-1 flex flex-col items-center px-2 space-y-4 md:space-y-6 translate-y-10"
         onSubmit={handleSubmit}
       >
         <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full space-y-3">

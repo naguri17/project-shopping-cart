@@ -37,7 +37,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container px-16 py-8">
+    <div className="cart-container px-16 py-8 h-[60vh]">
       <h2 className="text-3xl font-semibold text-center">Shopping Cart</h2>
       {cart.cartItems.length === 0 ? (
         <div className="flex flex-col items-center justify-center mt-10">
@@ -53,7 +53,7 @@ const Cart = () => {
           </div>
         </div>
       ) : (
-        <div className="translate-y-4">
+        <div className="translate-y-4 pb-5">
           <div className="titles my-4 ml-4 text-[14px] font-semibold uppercase">
             <h3 className="title pl-4">Product</h3>
             <h3 className="price">Price</h3>
@@ -119,7 +119,7 @@ const Cart = () => {
               </p>
               {auth._id ? (
                 <button
-                  className="w-full h-10 rounded-lg border-2 text-white cursor-pointer bg-cyan-600 hover:bg-cyan-400
+                  className="w-full h-10 rounded-lg border-2 text-white cursor-pointer bg-cyan-600 hover:bg-cyan-400 transition transform
                 "
                 >
                   Check out{" "}

@@ -23,7 +23,7 @@ function App() {
       <Router>
         <ToastContainer autoClose={500} />
         <NavBar />
-        <Routes>
+        <Routes className="h-screen">
           <Route path="/cart" element={<Cart />} />
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
